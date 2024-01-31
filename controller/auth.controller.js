@@ -69,4 +69,4 @@ const createUserSignInUser = async (req, res, next) => {
 
 
 // exporting the controller functions
-module.exports = { createUserSingUp, createUserSignInUser , createUserSignInUserWithGoogle};
+module.exports = { createUserSingUp, createUserSignInUser};
