@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Middlewares to allow CORS
 app.use(cors({
-    origin: '*',
+    origin: ['*', 'http://localhost:3000'],
     credentials: true
 })
 );
