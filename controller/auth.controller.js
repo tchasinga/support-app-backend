@@ -2,6 +2,7 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/user.model.js");
 const errorHandler = require("../utils/errors.js");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 
 // Adding user sing up
