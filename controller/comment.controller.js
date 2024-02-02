@@ -17,4 +17,18 @@ const createComments = async (req, res) => {
       }
 }
 
-module.exports = { createComments };
+// Retrieve all Comment from the database.
+const findAllIdeasComments = async (req, res) => {
+    Comment.find(req.query)
+        .then(tickets => {
+            res.send(tickets);
+        }).catch(err => {
+            res.status(500).send({
+                success: false,
+                message: err.message || "Some error occurred while retrieving tickets."
+            });
+        });
+}
+
+
+module.exports = { createComments , findAllIdeasComments };
